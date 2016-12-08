@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chrisnorwood.io</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <header class="hero-head">
+      <div class="wrapper">
+        <section class="content">
+          <h1>chris norwood</h1>
+          <div class="description">
+            a <div class="words"><span>Web Developer</span><span>Rock Climber</span><span>Beach Bum</span></div>
+            <br>from San Diego, CA
+          </div>
+          <nav>
+            <ul>
+              <li><a data-scroll href="#projects">Projects</a></li>
+              <li><a href="https://github.com/chrisnorwood/">Github</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <a data-scroll href="#projects" class="arrow-down"></a>
+    </header>
+    <section id="projects">
+      <header class="mast">
+        <section class="content">
+          <h1>projects:</h1>
+          <p>
+            a few things I've made
+          </p>
+        </section>
+      </header>
+      <section class="projects-main">
+        <article class="project">
+          <div class="screenshot">
+            <a href="https://rails-odinbook.herokuapp.com/">
+              <img src="img/odinbook.png">
+            </a>
+          </div>
+          <div class="description">
+            <h1><a href="https://rails-odinbook.herokuapp.com/">OdinBook</a></h1>
+            <p>This Rails project incorporates the main features of a social media website.  
+            It uses Devise & OAuth for login, with a Carrierwave/AWS S3 image uploader.
+            A PostgreSQL database was used in development, and it is deployed live to Heroku.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="screenshot">
+            <a href="https://vue-minesweeper.herokuapp.com/">
+              <img src="img/minesweeper.png">
+            </a>
+          </div>
+          <div class="description">
+            <h1><a href="https://vue-minesweeper.herokuapp.com/">Minesweeper</a></h1>
+            <p>This Minesweeper game was created with Vue.js.  It's organized with single-file
+            components, and Webpack for asset compiliation/bundling.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="screenshot">
+            <a href="http://chrisnorwood.io/js-snake/">
+              <img src="img/snake.png">
+            </a>
+          </div>
+          <div class="description">
+            <h1><a href="http://chrisnorwood.io/js-snake/">JS Snake</a></h1>
+            <p>This remake of the classic game "Snake" is written in Object 
+            Oriented ES6 Javascript, with light jQuery for DOM-manipulation.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="screenshot">
+            <a href="https://github.com/chrisnorwood/ruby-chess">
+              <img src="img/ruby-chess.png">
+            </a>
+          </div>
+          <div class="description">
+            <h1><a href="https://github.com/chrisnorwood/ruby-chess">Ruby Chess</a></h1>
+            <p>This command-line implementation of chess is written in Ruby and test-driven with RSpec.</p>
+          </div>
+        </article>
+      </section>
+    </section>
+  <script type="text/javascript" src="js/scripts.min.js"></script>
+  <script type="text/javascript">
+    smoothScroll.init();
+  </script>
+  </body>
+</html>
