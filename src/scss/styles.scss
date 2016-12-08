@@ -16,6 +16,7 @@ $blue1: #C6CBEB;
 $blue2: #9CA6DD;
 $blue3: #6776CA;
 $blue4: #5062C2;
+$blue4lt: #C5CAE9;
 $blue5: #3F51B5;
 $blue6: #3949AB;
 $blue7: #2F3D88;
@@ -61,7 +62,7 @@ body {
   max-width: 1600px;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  color: rbga(0,0,0,0.75);
+  color: #212121;
 }
 
 /*
@@ -230,10 +231,10 @@ body {
   // overflow: hidden;
   background-color: $blue4;
   @include linear-gradient($blue4, $blue5);
-  text-align: right;
   color: $blue2;
 
   .content {
+    text-align: right;
     h1 {
       font-size: 2.5em;
       // color: rgba(0,0,0,0.84);
@@ -248,7 +249,7 @@ body {
   }
 }
 
-.mast::after {
+#projects .mast::after, #contact .mast::after {
   content:'';
   position: absolute;
   top: 100%;
@@ -261,11 +262,34 @@ body {
   border-right: solid 50px transparent;
 }
 
+#contact .mast {
+  padding: 25px 0 25px 0;
+
+  .content {
+    text-align: left;
+  }
+}
+
+#contact .mast::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50px;
+  width: 0;
+  height: 0;
+  border-top: solid 50px white;
+  border-left: solid 50px transparent;
+  border-right: solid 50px transparent;
+}
+
+
 /*
 ** Projects
 */
 
 .projects-main {
+  position: relative;
   @include outer-container;
   margin-top: 25px;
   padding: 10px;
@@ -326,6 +350,31 @@ body {
         font-size: 1.1rem;
         line-height: 1.5;
       }
+    }
+  }
+}
+
+/*
+** Contact / Footer area
+*/
+
+.contact-main {
+  padding: 50px;
+  background-color: $blue4lt;
+
+  .media-wrapper {
+    @include outer-container;
+
+    .media-card {
+      @include row;
+      @include span-columns(12);
+      @include media(769px) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+      
+      background-color: white;
+      border-radius: 2px;
     }
   }
 }

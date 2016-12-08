@@ -10,7 +10,7 @@ var gulp = require("gulp"),
     uglify = require('gulp-uglify'); 
 
 // Compiles all gulp tasks
-gulp.task("default", ["sass"]);
+gulp.task("default", ["sass", "scripts"]);
 
 // Live reload anytime a file changes
 gulp.task("watch", ["browserSync", "sass", "scripts"], function() {
