@@ -63,7 +63,7 @@ body {
   max-width: 1600px;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  color: rbga(0, 0, 0, 0.75); }
+  color: #212121; }
 
 /*
 ** Header
@@ -201,16 +201,17 @@ body {
   background-color: #5062C2;
   background-image: -webkit-linear-gradient(#5062C2, #3F51B5);
   background-image: linear-gradient(#5062C2, #3F51B5);
-  text-align: right;
   color: #9CA6DD; }
-  .mast .content h1 {
-    font-size: 2.5em;
-    color: #ffffff;
-    text-shadow: 2px 2px rgba(31, 40, 90, 0.765); }
-  .mast .content p {
-    font-size: 1.3em; }
+  .mast .content {
+    text-align: right; }
+    .mast .content h1 {
+      font-size: 2.5em;
+      color: #ffffff;
+      text-shadow: 2px 2px rgba(31, 40, 90, 0.765); }
+    .mast .content p {
+      font-size: 1.3em; }
 
-.mast::after {
+#projects .mast::after, #contact .mast::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -222,10 +223,28 @@ body {
   border-left: solid 50px transparent;
   border-right: solid 50px transparent; }
 
+#contact .mast {
+  padding: 25px 0 25px 0; }
+  #contact .mast .content {
+    text-align: left; }
+
+#contact .mast::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50px;
+  width: 0;
+  height: 0;
+  border-top: solid 50px white;
+  border-left: solid 50px transparent;
+  border-right: solid 50px transparent; }
+
 /*
 ** Projects
 */
 .projects-main {
+  position: relative;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
@@ -297,3 +316,41 @@ body {
       .projects-main .project .description p {
         font-size: 1.1rem;
         line-height: 1.5; }
+
+/*
+** Contact / Footer area
+*/
+.contact-main {
+  padding: 50px;
+  background-color: #C5CAE9; }
+  .contact-main .media-wrapper {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .contact-main .media-wrapper::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .contact-main .media-wrapper .media-card {
+      display: block;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      background-color: white;
+      border-radius: 2px; }
+      .contact-main .media-wrapper .media-card::after {
+        clear: both;
+        content: "";
+        display: table; }
+      .contact-main .media-wrapper .media-card:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 769px) {
+        .contact-main .media-wrapper .media-card {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 65.88078%;
+          margin-left: 17.05961%; }
+          .contact-main .media-wrapper .media-card:last-child {
+            margin-right: 0; } }
