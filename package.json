@@ -16,7 +16,8 @@
     "smooth-scroll": "github:cferdinandi/smooth-scroll"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "git push origin `git subtree split --prefix=dist/ source`:master"
   },
   "repository": {
     "type": "git",

@@ -62,7 +62,7 @@ body {
   max-width: 1600px;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  color: #212121;
+  color: #777;
 }
 
 /*
@@ -232,7 +232,7 @@ body {
   background-color: $blue4;
   @include linear-gradient($blue4, $blue5);
   color: $blue2;
-
+  @include shadow(2);
   .content {
     text-align: right;
     h1 {
@@ -333,6 +333,7 @@ body {
         color: $orange-accent;
         
         a {
+          color: $orange-accent;
           text-decoration: none;
 
           &:hover {

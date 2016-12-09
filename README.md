@@ -6,5 +6,5 @@
 
 # Deploying dist to master:
 ```
-git push origin `git subtree split --prefix dist master`:production --force
+git push origin `git subtree split --prefix=dist/ source`:master --force
 ```
