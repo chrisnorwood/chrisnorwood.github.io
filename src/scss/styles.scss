@@ -292,20 +292,22 @@ body {
   position: relative;
   @include outer-container;
   margin-top: 25px;
-  padding: 10px;
+  padding: 20px 0 50px 0;
   .project {
-    @include row;
-    margin: 55px 0;
-    .screenshot {
-      @include media(768px) {
-        @include span-columns(4);
-        @include shift(2);
-      }
+    @include media(768px) {
+      @include span-columns(4)
+      @include omega(3n);
+    }
 
-      @include span-columns(12);
+    // @include span-columns(12);
+
+    margin: 30px 0 10px 0;
+    .screenshot {
 
       img {
-        width: 100%;
+        display: block;
+        margin: 0 auto;
+        width: 95%;
         @include shadow(2);
         border-radius: 3px;
 
@@ -315,43 +317,43 @@ body {
       }      
     }
 
-    .description {
-      @include media(768px) {
-        @include span-columns(5);
-      }
+    // .description {
+    //   @include media(768px) {
+    //     @include span-columns(5);
+    //   }
 
-      @include span-columns(12);
+    //   @include span-columns(12);
 
-      h1 {
-        @include media(768px) {
-          margin-top: 0;
-        }
+    //   h1 {
+    //     @include media(768px) {
+    //       margin-top: 0;
+    //     }
 
-        font-size: 1.7em;
-        line-height: 1.5;
-        margin-top: 8px;
-        color: $orange-accent;
+    //     font-size: 1.7em;
+    //     line-height: 1.5;
+    //     margin-top: 8px;
+    //     color: $orange-accent;
         
-        a {
-          color: $orange-accent;
-          text-decoration: none;
+    //     a {
+    //       color: $orange-accent;
+    //       text-decoration: none;
 
-          &:hover {
-            text-decoration: underline;
-          }
+    //       &:hover {
+    //         text-decoration: underline;
+    //       }
 
-          &:visited {
-            text-decoration: italic;
-            color: $orange-accentlt;
-          }
-        }
-      }
+    //       &:visited {
+    //         text-decoration: italic;
+    //         color: $orange-accentlt;
+    //       }
+    //     }
+    //   }
 
-      p {
-        font-size: 1.1rem;
-        line-height: 1.5;
-      }
-    }
+    //   p {
+    //     font-size: 1.1rem;
+    //     line-height: 1.5;
+    //   }
+    // }
   }
 }
 
