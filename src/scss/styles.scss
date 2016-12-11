@@ -65,6 +65,120 @@ body {
   color: #777;
 }
 
+
+/*
+** Modals
+*/
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  transition: opacity .3s ease;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modal-container {
+  @include outer-container;
+
+  @include media(769px) {
+    @include span-columns(6);
+    @include shift(3);
+    padding: 20px 30px;
+  }
+
+  cursor: default;
+  margin: 40px 10px 0 10px;
+  padding: 20px 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  text-align: center;
+}
+
+.modal-header h2 {
+  margin: 10px 5px 15px 5px;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: $orange-accent;
+}
+
+.modal-body {
+  .project-image {
+    position: relative;
+    max-width: 500px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+    @include shadow(3);
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 3px;
+    }
+
+    .caption {
+      display: block;
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      color: #fff;
+      left: 0;
+      bottom: 0;
+      padding: 1em;
+      font-size: 1.5em;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.6) 100%) repeat 0 0;
+      z-index: 1;
+      border-radius: 3px;
+    }
+  }
+
+  p {
+    text-align: left;
+    margin-top: 15px;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.modal-enter, .modal-leave, .modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter-active {
+    opacity: 1;
+}
+
+.modal-enter .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.modal-leave .modal-container {
+  transform: scale(0.8);
+}
+
 /*
 ** Header
 */ 
@@ -312,6 +426,7 @@ body {
         border-radius: 3px;
 
         &:hover {
+          cursor: pointer;
           @include shadow(3);
         }
       }      
