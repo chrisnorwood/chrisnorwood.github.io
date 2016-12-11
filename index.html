@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
-  <body>
+  <body id="vue-app">
     <header class="hero-head">
       <div class="wrapper">
         <section class="content">
@@ -37,69 +37,9 @@
         </section>
       </header>
       <section class="projects-main">
-        <article class="project">
-          <div class="screenshot">
-            <a href="https://rails-odinbook.herokuapp.com/">
-              <img src="img/odinbook.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="https://vue-minesweeper.herokuapp.com/">
-              <img src="img/minesweeper.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="http://chrisnorwood.io/js-snake/">
-              <img src="img/snake.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="https://github.com/chrisnorwood/ruby-chess">
-              <img src="img/ruby-chess.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="https://rails-odinbook.herokuapp.com/">
-              <img src="img/odinbook.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="https://vue-minesweeper.herokuapp.com/">
-              <img src="img/minesweeper.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="http://chrisnorwood.io/js-snake/">
-              <img src="img/snake.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="https://github.com/chrisnorwood/ruby-chess">
-              <img src="img/ruby-chess.png">
-            </a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="screenshot">
-            <a href="http://chrisnorwood.io/js-snake/">
-              <img src="img/snake.png">
-            </a>
-          </div>
-        </article>
+        <project v-for="project in projects" :project="project" v-on:select="selectProject(project)">
+        </project>
+        <modal :show="showModal" :project="selectedProject" v-on:close="closeModal"></modal>
       </section>
     </section>
     <section id="contact">
@@ -114,11 +54,43 @@
       <section class="contact-main">
         <div class="media-wrapper">
           <article class="media-card">
-            contact infor card
+            Contact Info
           </article>
         </div>
       </section>
     </section>
+
+    <script type="x/template" id="modal-template">
+      <transition name="modal">
+        <div class="modal-mask" @click="closeModal()" v-show="show">
+          <div class="modal-container" @click.stop>
+            <div class="modal-body">
+              <figure class="project-image">
+                <img :src="project.imageUrl">
+                <figcaption class="caption">
+                  {{ project.name }}
+                </figcaption>
+              </figure>
+              <p>
+                {{ project.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </script>
+
+    <script type="x/template" id="project-template">
+      <article class="project">
+        <div class="screenshot">
+          <a @click="selectProject(project)">
+            <img :src="project.imageUrl">
+          </a>
+        </div>
+      </article>
+    </script>
+
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.min.js"></script>
     <script type="text/javascript" src="js/scripts.min.js"></script>
     <script type="text/javascript">
       smoothScroll.init();
