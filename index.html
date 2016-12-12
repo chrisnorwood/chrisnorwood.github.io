@@ -68,12 +68,25 @@
               <figure class="project-image">
                 <img :src="project.imageUrl">
                 <figcaption class="caption">
-                  {{ project.name }}
+                  <h3>{{ project.name }}</h3>
+                  <span class="tag" :style="{ backgroundColor: project.tag.color }">
+                    {{ project.tag.text }}
+                  </span>
                 </figcaption>
               </figure>
-              <p>
-                {{ project.description }}
-              </p>
+              <div class="list">
+                {{ project.list }}
+              </div>
+              <div class="buttons">
+                <div class="input-addon" v-if="project.url !== ''">
+                  <span class="item live-icon"></span>
+                  <a class="item button" :href="project.url" target="_blank">View Live</a>
+                </div>
+                <div class="input-addon">
+                  <span class="item gh-icon"></span>
+                  <a class="item button" :href="project.gitUrl" target="_blank">View Source</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
