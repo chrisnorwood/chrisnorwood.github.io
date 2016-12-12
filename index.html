@@ -75,18 +75,20 @@
                 </figcaption>
               </figure>
               <div class="list">
-                {{ project.list }}
-              </div>
-              <div class="buttons">
-                <div class="input-addon" v-if="project.url !== ''">
-                  <span class="item live-icon"></span>
-                  <a class="item button" :href="project.url" target="_blank">View Live</a>
+                <p>{{ project.list }}</p>
+                <hr>
+                <div class="buttons">
+                  <div class="input-addon" v-if="project.url !== ''">
+                    <span class="item live-icon"></span>
+                    <a class="item button" :href="project.url" target="_blank">View Live</a>
+                  </div>
+                  <div class="input-addon">
+                    <span class="item gh-icon"></span>
+                    <a class="item button" :href="project.gitUrl" target="_blank">View Source</a>
+                  </div>
                 </div>
-                <div class="input-addon">
-                  <span class="item gh-icon"></span>
-                  <a class="item button" :href="project.gitUrl" target="_blank">View Source</a>
-                </div>
               </div>
+              
             </div>
           </div>
         </div>
@@ -98,6 +100,11 @@
         <div class="screenshot">
           <a @click="selectProject(project)">
             <img :src="project.imageUrl">
+            <div class="caption">
+            <span class="tag" :style="{ backgroundColor: project.tag.color }">
+                {{ project.tag.text }}
+              </span>
+            </div>
           </a>
         </div>
       </article>

@@ -42,7 +42,7 @@ new Vue({
         imageUrl: 'img/minesweeper.png',
         url: 'https://vue-minesweeper.herokuapp.com/',
         gitUrl: 'https://github.com/chrisnorwood/vue-minesweeper',
-        tag: { text: 'Vue.js', color: '#5062C2' },
+        tag: { text: 'Vue.js', color: '#9CA6DD' },
         list: 'Vue.js, Webpack, CSS'
       },
       { 
@@ -50,7 +50,7 @@ new Vue({
         imageUrl: 'img/odinbook.png',
         url: 'https://rails-odinbook.herokuapp.com/',
         gitUrl: 'https://github.com/chrisnorwood/odinbook',
-        tag: { text: 'Rails', color: '#E91E63' },
+        tag: { text: 'Rails', color: '#2F3D88' },
         list: 'Ruby on Rails, Bulma, Devise, OAuth, AWS S3, Heroku'
       },
       { 
@@ -82,7 +82,7 @@ new Vue({
         imageUrl: 'img/flight-booker.png',
         url: 'https://top-flight-booker.herokuapp.com/',
         gitUrl: 'https://github.com/chrisnorwood/odin-flight-booker',
-        tag: { text: 'Rails', color: '#E91E63' },
+        tag: { text: 'Rails', color: '#2F3D88' },
         list: 'Ruby on Rails, Foundation, Slim'
       },
       { 
@@ -90,7 +90,7 @@ new Vue({
         imageUrl: 'img/word-guess.png',
         url: 'https://sinatra-guessing-game.herokuapp.com',
         gitUrl: 'https://github.com/chrisnorwood/wordguess-web',
-        tag: { text: 'Sinatra', color: '#5062C2' },
+        tag: { text: 'Sinatra', color: '#F3AF5C' },
         list: 'Ruby, Sinatra, File Parsing'
       },
       { 
@@ -98,8 +98,8 @@ new Vue({
         imageUrl: 'img/flickr-api.png',
         url: 'https://top-flickr-gallery.herokuapp.com',
         gitUrl: 'https://github.com/chrisnorwood/flickr-photofeeds',
-        tag: { text: 'Rails', color: '#E91E63' },
-        list: 'Ruby on Rails, Bootstrap, API'
+        tag: { text: 'Rails', color: '#2F3D88' },
+        list: 'Ruby on Rails, Bootstrap 4, API'
       },
       { 
         name: 'Connect Four',
@@ -107,7 +107,7 @@ new Vue({
         url: '',
         gitUrl: 'https://github.com/chrisnorwood/connect-four',
         tag: { text: 'Ruby', color: 'red' },
-        list: 'Ruby, RSPec, OOP, Terminal'
+        list: 'Ruby, RSpec, OOP'
       },
     ],
   },
