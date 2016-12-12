@@ -8,10 +8,12 @@ Vue.component('modal', {
       this.$emit('close');
     },
   },
+  updated: function () {
+
+  },
   mounted: function () {
     var vm = this;
     document.addEventListener("keydown", function(e) {
-      console.log(e.keyCode);
       if (vm.show && e.keyCode == 27) {
         vm.closeModal();
       }
@@ -24,7 +26,6 @@ Vue.component('project', {
   props: ['project'],
   methods: {
     selectProject: function(project) {
-      console.log(project);
       this.$emit('select', project);
     },
   },
@@ -34,12 +35,80 @@ new Vue({
   el: '#projects',
   data: {
     showModal: false,
-    selectedProject: {},
+    selectedProject: { name: '', imageUrl: '', url: '', gitUrl: '', tag: { text: '', color: '' }, list: '' },
     projects: [
-      { name: 'Ruby Chess',  imageUrl: 'img/ruby-chess.png',  url: 'https://github.com/chrisnorwood/ruby-chess', description: 'This command-line implementation of chess is written in Ruby and test-driven with RSpec.' },
-      { name: 'Odinbook',    imageUrl: 'img/odinbook.png',    url: 'https://rails-odinbook.herokuapp.com/',      description: 'This Rails project incorporates the main features of a social media website. It uses Devise & OAuth for login, with a Carrierwave/AWS S3 image uploader. A PostgreSQL database was used in development, and it is deployed on Heroku.' },
-      { name: 'Minesweeper', imageUrl: 'img/minesweeper.png', url: 'https://vue-minesweeper.herokuapp.com/',     description: 'This Minesweeper game was created with Vue.js.  It is organized with single-file components, and Webpack for asset compiliation/bundling.' },
-      { name: 'Javascript Snake',    imageUrl: 'img/snake.png',       url: 'http://chrisnorwood.io/js-snake/',           description: 'This remake of the classic game "Snake" is written in Object Oriented ES6 Javascript, with light jQuery for DOM-manipulation.'},
+      { 
+        name: 'Minesweeper',
+        imageUrl: 'img/minesweeper.png',
+        url: 'https://vue-minesweeper.herokuapp.com/',
+        gitUrl: 'https://github.com/chrisnorwood/vue-minesweeper',
+        tag: { text: 'Vue.js', color: '#5062C2' },
+        list: 'Vue.js, Webpack, CSS'
+      },
+      { 
+        name: 'Odinbook',
+        imageUrl: 'img/odinbook.png',
+        url: 'https://rails-odinbook.herokuapp.com/',
+        gitUrl: 'https://github.com/chrisnorwood/odinbook',
+        tag: { text: 'Rails', color: '#E91E63' },
+        list: 'Ruby on Rails, Bulma, Devise, OAuth, AWS S3, Heroku'
+      },
+      { 
+        name: 'Snake',
+        imageUrl: 'img/snake.png',
+        url: 'http://chrisnorwood.io/js-snake/',
+        gitUrl: 'https://github.com/chrisnorwood/js-snake',
+        tag: { text: 'Javascript', color: '#8BC34A' },
+        list: 'ES6, OOP, jQuery'
+      },
+      { 
+        name: 'CLI Chess',
+        imageUrl: 'img/ruby-chess.png',
+        url: '',
+        gitUrl: 'https://github.com/chrisnorwood/ruby-chess',
+        tag: { text: 'Ruby', color: 'red' },
+        list: 'Ruby, RSpec, OOP, Terminal'
+      },
+      { 
+        name: 'Calculator',
+        imageUrl: 'img/js-calc.png',
+        url: 'http://chrisnorwood.io/js-calculator/',
+        gitUrl: 'https://github.com/chrisnorwood/js-calculator',
+        tag: { text: 'Javascript', color: '#8BC34A' },
+        list: 'Vanilla Javascript, ES6'
+      },
+      { 
+        name: 'Flight Booker',
+        imageUrl: 'img/flight-booker.png',
+        url: 'https://top-flight-booker.herokuapp.com/',
+        gitUrl: 'https://github.com/chrisnorwood/odin-flight-booker',
+        tag: { text: 'Rails', color: '#E91E63' },
+        list: 'Ruby on Rails, Foundation, Slim'
+      },
+      { 
+        name: 'Word Guesser',
+        imageUrl: 'img/word-guess.png',
+        url: 'https://sinatra-guessing-game.herokuapp.com',
+        gitUrl: 'https://github.com/chrisnorwood/wordguess-web',
+        tag: { text: 'Sinatra', color: '#5062C2' },
+        list: 'Ruby, Sinatra, File Parsing'
+      },
+      { 
+        name: 'Flickr Feed',
+        imageUrl: 'img/flickr-api.png',
+        url: 'https://top-flickr-gallery.herokuapp.com',
+        gitUrl: 'https://github.com/chrisnorwood/flickr-photofeeds',
+        tag: { text: 'Rails', color: '#E91E63' },
+        list: 'Ruby on Rails, Bootstrap, API'
+      },
+      { 
+        name: 'Connect Four',
+        imageUrl: 'img/connect-four.png',
+        url: '',
+        gitUrl: 'https://github.com/chrisnorwood/connect-four',
+        tag: { text: 'Ruby', color: 'red' },
+        list: 'Ruby, RSPec, OOP, Terminal'
+      },
     ],
   },
   methods: {
@@ -50,7 +119,6 @@ new Vue({
       this.showModal = false;
     },
     selectProject: function(selected) {
-      console.log('we out here');
       this.selectedProject = selected;
       this.displayModal();
     },
