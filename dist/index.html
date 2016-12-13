@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>chrisnorwood.io</title>
     
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/img/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/img/icons/favicon.ico">
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body id="vue-app">
@@ -19,8 +24,8 @@
           <nav>
             <ul>
               <li><a data-scroll href="#projects">Projects</a></li>
-              <li><a href="https://github.com/chrisnorwood/" target="_blank">Github</a></li>
               <li><a data-scroll href="#contact">Contact</a></li>
+              <li><a href="https://github.com/chrisnorwood/" target="_blank">Github</a></li>
             </ul>
           </nav>
         </section>
@@ -59,21 +64,30 @@
                 <p>
                 In my spare time, you can find me roaming the hills in search of good adventure.
                 </p>
-                <p>
-                  cwncool@gmail.com
-                </p>
+                <div class="contact-buttons">
+                  <div class="input-addon">
+                    <span class="item email-icon"></span>
+                    <a class="item button" href="mailto:cwncool@gmail.com?Subject=Hello">
+                      cwncool@gmail.com
+                    </a>
+                  </div>
+                  <div class="input-addon">
+                    <span class="item gh-icon"></span>
+                    <a class="item button" href="https://github.com/chrisnorwood/" target="_blank">
+                      Github
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
         </section>
       </header>
-      <section class="contact-main">
-        <div class="media-wrapper">
-          
-        </div>
-      </section>
     </section>
+    <footer class="footer-main">
+      2016 | chrisnorwood.io
+    </footer>
 
     <script type="x/template" id="modal-template">
       <transition name="modal">
@@ -92,7 +106,7 @@
               <div class="list">
                 <p>{{ project.list }}</p>
                 <hr>
-                <div class="buttons">
+                <div class="project-buttons">
                   <div class="input-addon" v-if="project.url !== ''">
                     <span class="item live-icon"></span>
                     <a class="item button" :href="project.url" target="_blank">View Live</a>
