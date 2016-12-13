@@ -540,6 +540,9 @@ body {
         font-size: 1.1em;
         color: rgba(0, 0, 0, 0.9);
         text-shadow: 1px 1px #E8EAF6; }
+      @media screen and (max-width: 400px) {
+        .cards .card .card-copy .contact-buttons .sm-shrink {
+          font-size: 0.7em; } }
       .cards .card .card-copy .contact-buttons .button {
         text-align: center;
         background-color: rgba(188, 200, 206, 0.8); }

@@ -684,7 +684,13 @@ body {
           border: none;
           font-size: 1.1em;
           color: rgba(0,0,0,0.9);
-          text-shadow: 1px 1px $blue0;          
+          text-shadow: 1px 1px $blue0;
+        }
+
+        .sm-shrink {
+          @include media(max-width 400px) {
+            font-size: 0.7em;
+          }
         }
 
         .button {
