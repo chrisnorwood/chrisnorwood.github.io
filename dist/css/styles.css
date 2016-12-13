@@ -211,7 +211,8 @@ body {
   .modal-body .buttons {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around; }
+    justify-content: space-around;
+    font-style: normal; }
 
 .text-right {
   text-align: right; }
@@ -373,7 +374,7 @@ body {
     .mast .content p {
       font-size: 1.3em; }
 
-#projects .mast::after, #contact .mast::after {
+#projects .mast::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -386,9 +387,15 @@ body {
   border-right: solid 50px transparent; }
 
 #contact .mast {
-  padding: 25px 0 25px 0; }
+  padding: 25px 0 25px 0;
+  background-color: #607D8B;
+  background-image: none; }
   #contact .mast .content {
     text-align: left; }
+    #contact .mast .content h1 {
+      color: rgba(0, 0, 0, 0.9);
+      text-shadow: 1px 1px #E8EAF6;
+      margin-bottom: 15px; }
 
 #contact .mast::before {
   content: '';
@@ -431,6 +438,8 @@ body {
           margin-right: 0; }
         .projects-main .project:nth-child(3n+1) {
           clear: left; } }
+    .projects-main .project .screenshot:hover {
+      cursor: pointer; }
     .projects-main .project .screenshot img {
       display: block;
       margin: 0 auto;
@@ -438,15 +447,14 @@ body {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
       border-radius: 7px; }
       .projects-main .project .screenshot img:hover {
-        cursor: pointer;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 /*
 ** Contact / Footer area
 */
 .contact-main {
-  padding: 50px;
-  background-color: #C5CAE9; }
+  padding: 25px;
+  background-color: #EEEEEE; }
   .contact-main .media-wrapper {
     max-width: 68em;
     margin-left: auto;
@@ -478,3 +486,81 @@ body {
           margin-left: 17.05961%; }
           .contact-main .media-wrapper .media-card:last-child {
             margin-right: 0; } }
+
+/*
+** Contact Card
+*/
+.cards {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  .cards .card {
+    -webkit-flex-basis: 10em;
+    -moz-flex-basis: 10em;
+    flex-basis: 10em;
+    -ms-flex-preferred-size: 10em;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    margin: 0 auto;
+    padding-bottom: 0.5em;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 657px;
+    color: rgba(0, 0, 0, 0.84); }
+    @media screen and (min-width: 768px) {
+      .cards .card {
+        margin: 0 1em; } }
+    .cards .card .card-image {
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      max-height: 384px;
+      position: relative; }
+      @media screen and (max-width: 570px) {
+        .cards .card .card-image .caption {
+          top: 0; } }
+      .cards .card .card-image .caption span {
+        font-size: 1.2em;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 0.1em 0.3em;
+        background-color: #F3AF5C; }
+        @media screen and (max-width: 360px) {
+          .cards .card .card-image .caption span {
+            font-size: 0.9em; } }
+      .cards .card .card-image img {
+        border-radius: 10px 10px 0 0;
+        width: 100%; }
+    .cards .card .card-header {
+      margin: 0.65em 0.8em 0.55em 0.8em;
+      padding-bottom: 0.5em;
+      font-style: italic;
+      font-size: 1.1em;
+      border-bottom: 1px solid #BDBDBD; }
+    .cards .card .card-copy p {
+      margin: 15px 25px 10px 25px;
+      line-height: 1.6;
+      font-size: 0.8em; }

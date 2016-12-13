@@ -23,6 +23,8 @@ $blue7: #2F3D88;
 $blue9: #1F285A;
 $blue9lt: rgba(31, 40, 90, 0.765);
 
+$bluegrey4: #607D8B;
+
 $orange-accent: #F3AF5C;
 $orange-accentlt: rgba(243, 175, 92, 0.84);
 $orange-accentdk: #D99037;
@@ -255,6 +257,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    font-style: normal;
   }
 }
 
@@ -469,7 +472,7 @@ body {
   }
 }
 
-#projects .mast::after, #contact .mast::after {
+#projects .mast::after, {
   content:'';
   position: absolute;
   top: 100%;
@@ -484,9 +487,17 @@ body {
 
 #contact .mast {
   padding: 25px 0 25px 0;
+  background-color: $bluegrey4;
+  background-image: none;
 
   .content {
     text-align: left;
+
+    h1 {
+      color: rgba(0,0,0,0.9);
+      text-shadow: 1px 1px $blue0;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -522,6 +533,9 @@ body {
     position: relative;
     margin: 30px 0 10px 0;
     .screenshot {
+      &:hover {
+        cursor: pointer;
+      }
 
       img {
 
@@ -532,7 +546,6 @@ body {
         border-radius: 7px;
 
         &:hover {
-          cursor: pointer;
           @include shadow(3);
         }
       }      
@@ -583,8 +596,8 @@ body {
 */
 
 .contact-main {
-  padding: 50px;
-  background-color: $blue4lt;
+  padding: 25px;
+  background-color: #EEEEEE;
 
   .media-wrapper {
     @include outer-container;
@@ -599,6 +612,83 @@ body {
       
       background-color: white;
       border-radius: 2px;
+    }
+  }
+}
+
+/*
+** Contact Card
+*/
+
+.cards {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+
+  .card {
+    @include flex-basis(10em);
+    @include flex-grow(1);
+    margin: 0 auto;
+
+    @include media(768px) {
+      margin: 0 1em;
+    }
+
+    padding-bottom: 0.5em;
+
+    @include shadow(4);
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 657px;
+
+    color: rgba(0,0,0,0.84);
+
+    .card-image {
+      background-color: rgba(0,0,0,0);
+      margin: 0;
+      padding: 0;
+      max-height: 384px;
+      position: relative;
+
+      .caption {
+
+        @include media(max-width 570px) {
+          top: 0;
+        }
+
+        span {
+          @include media(max-width 360px) {
+            font-size: 0.9em;
+          }
+
+          font-size: 1.2em;
+          color: #ffffff;
+          font-weight: bold;
+          padding: 0.1em 0.3em;
+          background-color: $orange-accent;
+        }
+      }
+
+      img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+      }
+    }
+    
+    .card-header {
+      margin: 0.65em 0.8em 0.55em 0.8em;
+      padding-bottom: 0.5em;
+      font-style: italic;
+      font-size: 1.1em;
+      border-bottom: 1px solid $divider;
+    }
+
+    .card-copy {
+      p {
+        margin: 15px 25px 10px 25px;
+        line-height: 1.6;
+        font-size: 0.8em;
+      }
     }
   }
 }
