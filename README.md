@@ -1,10 +1,9 @@
-## chrisnorwood.github.io
+# chrisnorwood.github.io / ( chrisnorwood.io )
 
-# Master tracks "dist" folder
+- master tracks /dist folder, for github pages hosting
+- source code can be modified in the `source` branch
 
-## ALL SOURCE IN "source" branch
-
-# Deploying dist to master:
+## Deploying dist to master:
 ```
 git push origin `git subtree split --prefix=dist/ source`:master --force
 ```

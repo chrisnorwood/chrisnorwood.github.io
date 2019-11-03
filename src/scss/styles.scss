@@ -1,11 +1,8 @@
 @import "reset";
-
-@import "bourbon";
 @import "grid-settings";
-@import "neat";
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700');
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
 
 /*
 ** Variables & Mixins
@@ -40,7 +37,6 @@ $divider: #BDBDBD;
   @else if $level == 5 {box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}
 }
 
-
 /*
 ** General Styles
 */ 
@@ -52,12 +48,12 @@ $divider: #BDBDBD;
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
-  font-family: 'Lora', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
   margin: 10px 0;
-  font-size: 2.1em;
+  font-size: 2.7em;
   font-weight: bold;
   letter-spacing: 0.03em;
 }
@@ -181,9 +177,17 @@ body {
 }
 
 .modal-container {
-  @include outer-container;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 
-  @include media(520px) {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  @media screen and (min-width: 520px) {
     margin: 40px auto;
   }
 
@@ -333,9 +337,9 @@ body {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-
   background-color: $blue4;
-  @include radial-gradient($blue4, $blue7);
+  background: radial-gradient($blue4, $blue7);
+
   color: $blue2;
   
   a {
@@ -359,7 +363,8 @@ body {
 
       h1 {
         color: #ffffff;
-        text-shadow: 2px 2px $blue9lt;
+        text-shadow: 1px 2px $blue9lt;
+        margin-bottom: -5px;
       }
 
       .description {
@@ -371,6 +376,7 @@ body {
           display: inline;
           overflow: hidden;
           span {
+            margin-left: 0.25em;
             position: absolute;
             opacity: 0;
             overflow: hidden;
@@ -415,7 +421,7 @@ body {
     left: 50%;
     bottom: 28%;
 
-    @include media(769px) {
+    @media screen and (min-width: 769px) {
       bottom: 25%
     }
   
@@ -457,7 +463,8 @@ body {
   position: relative;
   // overflow: hidden;
   background-color: $blue4;
-  @include linear-gradient($blue4, $blue5);
+  background: linear-gradient($blue4, $blue5);
+
   color: $blue2;
   @include shadow(2);
   .content {
@@ -467,7 +474,7 @@ body {
       // color: rgba(0,0,0,0.84);
       // text-shadow: 2px 2px $blue1;
       color: #ffffff;
-      text-shadow: 2px 2px $blue9lt;
+      text-shadow: 1px 2px $blue9lt;
     }
 
     p {
@@ -525,13 +532,37 @@ body {
 
 .projects-main {
   position: relative;
-  @include outer-container;
   margin-top: 25px;
   padding: 20px 0 50px 0;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
   .project {
-    @include media(768px) {
-      @include span-columns(4)
-      @include omega(3n);
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      float: left;
+      margin-right: 4.82916%;
+      width: 30.11389%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3n+1) {
+        clear: left;
+      }
     }
 
     position: relative;
@@ -600,16 +631,16 @@ body {
 */
 
 .cards {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   .card {
-    @include flex-basis(10em);
-    @include flex-grow(1);
+    flex-basis: 10em;
+    flex-grow: 1;
     margin: 0 auto;
 
-    @include media(768px) {
+    @media screen and (min-width: 768px) {
       margin: 0 1em;
     }
 
@@ -630,13 +661,12 @@ body {
       position: relative;
 
       .caption {
-
-        @include media(max-width 570px) {
+        @media screen and (max-width: 570px) {
           top: 0;
         }
 
         span {
-          @include media(max-width 360px) {
+          @media screen and (max-width: 360px) {
             font-size: 0.9em;
           }
 
@@ -688,7 +718,7 @@ body {
         }
 
         .sm-shrink {
-          @include media(max-width 400px) {
+          @media screen and (max-width: 400px) {
             font-size: 0.7em;
           }
         }
