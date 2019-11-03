@@ -466,7 +466,7 @@ body {
   background: linear-gradient($blue4, $blue5);
 
   color: $blue2;
-  @include shadow(2);
+  box-shadow: 8px 10px 10px -3px rgba(0,0,0,0.26);
   .content {
     text-align: right;
     h1 {

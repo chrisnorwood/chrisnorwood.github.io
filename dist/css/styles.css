@@ -357,7 +357,7 @@ body {
   background-color: #5062C2;
   background: linear-gradient(#5062C2, #3F51B5);
   color: #9CA6DD;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 8px 10px 10px -3px rgba(0, 0, 0, 0.26); }
   .mast .content {
     text-align: right; }
     .mast .content h1 {
