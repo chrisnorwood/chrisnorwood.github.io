@@ -249,7 +249,7 @@ new Vue({
     },
     projects: [{
       name: 'TMS-Light',
-      imageUrl: 'img/tms-light.png',
+      imageUrl: 'img/tms-light-2.png',
       url: 'https://tms-light-demo.herokuapp.com/',
       gitUrl: 'https://github.com/chrisnorwood/tms-light-v1',
       tag: {
@@ -258,7 +258,7 @@ new Vue({
       },
       list: 'React, Redux, Rails 6 API, JWT'
     }, {
-      name: 'Spectre Air & Ground Freight, Inc.',
+      name: 'Spectre Air & Ground Freight',
       imageUrl: 'img/spectre-air-500.png',
       url: 'https://spectreair.com/',
       gitUrl: 'https://github.com/chrisnorwood/spectre-air',
