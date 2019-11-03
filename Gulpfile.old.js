@@ -10,10 +10,14 @@ var gulp = require("gulp"),
     uglify = require('gulp-uglify'); 
 
 // Compiles all gulp tasks
-gulp.task("default", ["sass", "scripts"]);
+// gulp.task("default", ["sass", "scripts"]);
+
+gulp.task("default", gulp.parallel("sass", "scripts"));
 
 // Live reload anytime a file changes
-gulp.task("watch", ["browserSync", "sass", "scripts"], function() {
+// gulp.task("watch", ["browserSync", "sass", "scripts"], function() {
+
+gulp.task("watch", gulp.parallel("browserSync", "sass", "scripts"), function() {
   gulp.watch("src/scss/**/*.scss", ["sass"]);
   gulp.watch("src/js/**/*.js", ["scripts"]);
   gulp.watch("dist/*.html").on("change", browserSync.reload);
