@@ -257,7 +257,7 @@ new Vue({
         color: '#2F3D88'
       },
       list: 'React, Redux, Rails 6 API, JWT, Heroku',
-      desc: "This is a very basic \"Transportation Management System\" CRUD app, created to demonstrate a combined Rails API + React/Redux SPA. Both the API and React app are served together a single Heroku dyno."
+      desc: "This is a very basic \"Transportation Management System\" CRUD app, created to demonstrate a combined Rails API + React/Redux SPA. Both the API and React app are served together on a single Heroku dyno."
     }, {
       name: 'Spectre Air & Ground Freight',
       imageUrl: 'img/spectre-air-500.png',
