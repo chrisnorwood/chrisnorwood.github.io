@@ -256,7 +256,8 @@ new Vue({
         text: 'React + Rails',
         color: '#2F3D88'
       },
-      list: 'React, Redux, Rails 6 API, JWT'
+      list: 'React, Redux, Rails 6 API, JWT, Heroku',
+      desc: "This is a very basic \"Transportation Management System\" CRUD app, created to demonstrate a combined Rails API + React/Redux SPA. Both the API and React app are served together a single Heroku dyno."
     }, {
       name: 'Spectre Air & Ground Freight',
       imageUrl: 'img/spectre-air-500.png',
@@ -266,27 +267,30 @@ new Vue({
         text: 'HTML5',
         color: '#F3AF5C'
       },
-      list: 'HTML5, TailwindCSS, Gulp'
+      list: 'HTML5, TailwindCSS, Gulp',
+      desc: "This simple, responsive static-site was a redesign for a freight brokerage / 3PL logistics company."
     }, {
       name: 'Minesweeper',
       imageUrl: 'img/minesweeper.png',
-      url: 'https://vue-minesweeper.herokuapp.com/',
+      url: 'https://chrisnorwood.io/vue-minesweeper',
       gitUrl: 'https://github.com/chrisnorwood/vue-minesweeper',
       tag: {
         text: 'Vue.js',
         color: '#9CA6DD'
       },
-      list: 'Vue.js, Webpack, CSS'
+      list: 'Vue.js, Webpack, CSS',
+      desc: "This clone of the classic game, \"Minesweeper\", was built over a weekend using Vue.js 2.0. It features a timer, multiple difficulty settings, and tile-flagging."
     }, {
       name: 'Snake',
       imageUrl: 'img/snake.png',
-      url: 'http://chrisnorwood.io/js-snake/',
+      url: 'https://chrisnorwood.io/js-snake/',
       gitUrl: 'https://github.com/chrisnorwood/js-snake',
       tag: {
         text: 'Javascript',
         color: '#8BC34A'
       },
-      list: 'ES6, OOP, jQuery'
+      list: 'ES6, OOP, jQuery',
+      desc: "This recreation of the classic game \"Snake\" uses jQuery to connect the HTML grid with a javascript game object. It is responsive, and playable on the phone with buttons that pop up for < tablet-sized viewports."
     }, {
       name: 'Odinbook',
       imageUrl: 'img/odinbook.png',
@@ -296,7 +300,8 @@ new Vue({
         text: 'Rails',
         color: '#2F3D88'
       },
-      list: 'Ruby on Rails, Bulma, Devise, OAuth, AWS S3, Heroku'
+      list: 'Ruby on Rails, Bulma, Devise, OAuth, AWS S3, Heroku',
+      desc: "This is a social-media-type application built as my final project for The Odin Project's Rails Course. It features user authentication with Devise, AWS S3 image uploading, and AJAX form actions with jQuery."
     }, {
       name: 'CLI Chess',
       imageUrl: 'img/ruby-chess.png',
@@ -306,7 +311,8 @@ new Vue({
         text: 'Ruby',
         color: 'red'
       },
-      list: 'Ruby, RSpec, OOP, Terminal'
+      list: 'Ruby, RSpec, OOP, Terminal',
+      desc: "This is a command line chess game built in Ruby, tested thoroughly with RSpec."
     }, // { 
     //   name: 'Calculator',
     //   imageUrl: 'img/js-calc.png',
@@ -332,7 +338,8 @@ new Vue({
         text: 'Ruby',
         color: 'red'
       },
-      list: 'Ruby, RSpec, OOP'
+      list: 'Ruby, RSpec, OOP',
+      desc: "This is a command line \"Connect 4\" game built in Ruby, tested thoroughly with RSpec."
     }, {
       name: 'Word Guesser',
       imageUrl: 'img/word-guess.png',
@@ -342,7 +349,8 @@ new Vue({
         text: 'Sinatra',
         color: '#F3AF5C'
       },
-      list: 'Ruby, Sinatra, File Parsing'
+      list: 'Ruby, Sinatra, File Parsing',
+      desc: "This word-guessing game was built with Sinatra for The Odin Project. It's like hangman, but without the hanging man."
     }, {
       name: 'Flickr Feed',
       imageUrl: 'img/flickr-api.png',
@@ -352,7 +360,8 @@ new Vue({
         text: 'Rails',
         color: '#2F3D88'
       },
-      list: 'Ruby on Rails, Bootstrap 4, API'
+      list: 'Ruby on Rails, Bootstrap 4, API',
+      desc: "This image gallery pulls photos from the Flickr API by user ID. It uses the flickraw gem to access the Flickr API."
     }]
   },
   methods: {

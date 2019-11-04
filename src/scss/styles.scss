@@ -253,6 +253,19 @@ body {
     font-style: italic;
     font-size: 1.1em;
 
+    p:nth-child(2) {
+      @media screen and (max-width: 375px) {
+        font-size: 0.8em;
+        line-height: 1.3em;
+      }
+
+      font-size: 1.0em;
+      line-height: 1.5em;
+      padding: 0.5em;
+      text-align: left;
+      font-style: normal;
+    }
+
     hr {
       margin: 20px 0 10px 0;
       order: 0;
