@@ -86,7 +86,7 @@ new Vue({
         url: '',
         gitUrl: 'https://github.com/chrisnorwood/ruby-chess',
         tag: { text: 'Ruby', color: 'red' },
-        list: 'Ruby, RSpec, OOP, Terminal',
+        list: 'Ruby, RSpec, OOP, TDD',
         desc: `This is a command line chess game built in Ruby, tested thoroughly with RSpec.`
       },
       // { 
@@ -111,7 +111,7 @@ new Vue({
         url: '',
         gitUrl: 'https://github.com/chrisnorwood/connect-four',
         tag: { text: 'Ruby', color: 'red' },
-        list: 'Ruby, RSpec, OOP',
+        list: 'Ruby, RSpec, OOP, TDD',
         desc: `This is a command line "Connect 4" game built in Ruby, tested thoroughly with RSpec.`
       },
       { 
@@ -129,7 +129,7 @@ new Vue({
         url: 'https://top-flickr-gallery.herokuapp.com',
         gitUrl: 'https://github.com/chrisnorwood/flickr-photofeeds',
         tag: { text: 'Rails', color: '#2F3D88' },
-        list: 'Ruby on Rails, Bootstrap 4, API',
+        list: 'Ruby on Rails, Bootstrap 4',
         desc: `This image gallery pulls photos from the Flickr API by user ID. It uses the flickraw gem to access the Flickr API.`
       },
     ],
