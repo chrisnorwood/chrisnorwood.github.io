@@ -17,7 +17,7 @@ You can visit my personal website @ [https://chrisnorwood.io](https://chrisnorwo
 - source code can be modified in the `source` branch
 
 ## Gulp Tasks
-```
+```console
 ## Live reloading development environment
 ~/chrisnorwood.github.io$ gulp
 
