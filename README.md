@@ -18,7 +18,7 @@ You can visit my personal website @ [https://chrisnorwood.io](https://chrisnorwo
 
 ## Gulp Tasks
 ```console
-## Live reloading development environment
+## Live-reloading development environment
 ~/chrisnorwood.github.io$ gulp
 
 ## Build for deployment
