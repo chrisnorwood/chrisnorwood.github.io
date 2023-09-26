@@ -18,12 +18,11 @@
         <section class="content">
           <h1>chris norwood</h1>
           <div class="description">
-            a <div class="words"><span>Web Developer</span><span>Digital Marketer</span><span>Rock Climber</span></div>
+            a <div class="words"><span>Software Engineer</span><span>Surfer</span><span>Rock Climber</span></div>
             <br>from San Diego, CA
           </div>
           <nav>
             <ul>
-              <li><a data-scroll href="#projects">Projects</a></li>
               <li><a data-scroll href="#contact">Contact</a></li>
               <li><a href="https://github.com/chrisnorwood/" target="_blank">Github</a></li>
               <li><a href="https://www.linkedin.com/in/chris-norwood/" target="_blank">LinkedIn</a></li>
@@ -36,22 +35,13 @@
     <section id="projects">
       <header class="mast">
         <section class="content">
-          <h1>projects:</h1>
-          <p>
-            a few things I've made
-          </p>
+          <h1>contact:</h1>
         </section>
       </header>
-      <section class="projects-main">
-        <project v-for="project in projects" :project="project" v-on:select="selectProject(project)">
-        </project>
-        <modal :show="showModal" :project="selectedProject" v-on:close="closeModal"></modal>
-      </section>
     </section>
     <section id="contact">
       <header class="mast contact">
         <section class="content">
-          <h1>contact:</h1>
           <div class="cards">
             <div class="card">
               <div class="card-image">
@@ -61,9 +51,14 @@
                 </div>
               </div>
               <div class="card-copy">
-                <p>I'm a self-taught, full-stack developer from San Diego, CA.  I have experience with Ruby and Javascript, using various frameworks and libraries, such as Rails, Sinatra, React, and Vue.js.</p>
                 <p>
-                In my spare time, you can find me roaming the hills in search of good adventure.
+                  I'm a full-stack developer from San Diego, CA.
+                </p>
+                <p>
+                  My recent work experience is primarily with Typescript, but I've worked with Python, Java, Elixir, and Ruby in various capacities as well.
+                </p>
+                <p>
+                  In my spare time, you can find me roaming the hills in search of good adventure.
                 </p>
                 <div class="contact-buttons">
                   <div class="input-addon sm-shrink">
@@ -88,66 +83,12 @@
               </div>
             </div>
           </div>
-
         </section>
       </header>
     </section>
     <footer class="footer-main">
-      2019 | chrisnorwood.io
+      2023 | chrisnorwood.io
     </footer>
-
-    <script type="x/template" id="modal-template">
-      <transition name="modal">
-        <div class="modal-mask" @click="closeModal()" v-show="show">
-          <div class="modal-container" @click.stop>
-            <div class="modal-body">
-              <figure class="project-image">
-                <img :src="project.imageUrl">
-                <figcaption class="caption">
-                  <h3>{{ project.name }}</h3>
-                  <span class="tag" :style="{ backgroundColor: project.tag.color }">
-                    {{ project.tag.text }}
-                  </span>
-                </figcaption>
-              </figure>
-              <div class="list">
-                <p>{{ project.list }}</p>
-                <p>{{ project.desc }}</p>
-                <hr>
-                <div class="project-buttons">
-                  <div class="input-addon" v-if="project.url !== ''">
-                    <span class="item live-icon"></span>
-                    <a class="item button" :href="project.url" target="_blank">View Live</a>
-                  </div>
-                  <div class="input-addon">
-                    <span class="item gh-icon"></span>
-                    <a class="item button" :href="project.gitUrl" target="_blank">View Source</a>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </transition>
-    </script>
-
-    <script type="x/template" id="project-template">
-      <article class="project">
-        <div class="screenshot">
-          <a @click="selectProject(project)">
-            <img :src="project.imageUrl">
-            <div class="caption">
-              <span class="tag" :style="{ backgroundColor: project.tag.color }">
-                {{ project.tag.text }}
-              </span>
-            </div>
-          </a>
-        </div>
-      </article>
-    </script>
-
-    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.min.js"></script>
     <script type="text/javascript" src="js/scripts.min.js"></script>
     <script type="text/javascript">
       var scroll = new SmoothScroll('a[href*="#"]');
