@@ -396,23 +396,12 @@ body {
   background-color: #607D8B;
   background-image: none; }
   #contact .mast .content {
+    padding-top: 25px;
     text-align: left; }
     #contact .mast .content h1 {
       color: rgba(0, 0, 0, 0.9);
       text-shadow: 1px 1px #E8EAF6;
       margin-bottom: 15px; }
-
-#contact .mast::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -50px;
-  width: 0;
-  height: 0;
-  border-top: solid 50px white;
-  border-left: solid 50px transparent;
-  border-right: solid 50px transparent; }
 
 /*
 ** Projects
