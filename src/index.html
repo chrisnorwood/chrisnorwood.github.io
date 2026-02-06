@@ -1,31 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>chrisnorwood.io</title>
-    
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/img/icons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="shortcut icon" href="/img/icons/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/img/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/img/icons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/img/icons/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="shortcut icon" href="/img/icons/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body id="vue-app">
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (t) document.body.setAttribute("data-theme", t);
+      })();
+    </script>
+    <div class="theme-picker">
+      <button
+        class="theme-btn theme-btn--midnight active"
+        data-theme=""
+        title="Midnight"
+      ></button>
+      <button
+        class="theme-btn theme-btn--indigo"
+        data-theme="indigo"
+        title="Indigo"
+      ></button>
+      <button
+        class="theme-btn theme-btn--amber"
+        data-theme="amber"
+        title="Amber"
+      ></button>
+      <button
+        class="theme-btn theme-btn--violet"
+        data-theme="violet"
+        title="Violet"
+      ></button>
+    </div>
     <header class="hero-head">
       <div class="wrapper">
         <section class="content">
           <h1>chris norwood</h1>
           <div class="description">
-            a <div class="words"><span>Software Engineer</span><span>Surfer</span><span>Rock Climber</span></div>
-            <br>from San Diego, CA
+            a
+            <div class="words">
+              <span>Software Engineer</span><span>Surfer</span
+              ><span>Rock Climber</span>
+            </div>
+            <br />from San Diego, CA
           </div>
           <nav>
             <ul>
               <li><a data-scroll href="#contact">Contact</a></li>
-              <li><a href="https://github.com/chrisnorwood/" target="_blank">Github</a></li>
-              <li><a href="https://www.linkedin.com/in/chris-norwood/" target="_blank">LinkedIn</a></li>
+              <li>
+                <a href="https://github.com/chrisnorwood/" target="_blank"
+                  >Github</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/chris-norwood/"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
             </ul>
           </nav>
         </section>
@@ -45,40 +101,46 @@
           <div class="cards">
             <div class="card">
               <div class="card-image">
-                <img src="img/climbing.jpg" alt="Climbing in Joshua Tree">
+                <img src="img/climbing.jpg" alt="Climbing in Joshua Tree" />
                 <div class="caption">
                   <span>Christopher Norwood</span>
                 </div>
               </div>
               <div class="card-copy">
+                <p>I'm a full-stack developer from San Diego, CA.</p>
                 <p>
-                  I'm a full-stack developer from San Diego, CA.
+                  My recent work experience is with Typescript, but I've worked
+                  with Python, Java, Elixir, and Ruby in various capacities as
+                  well.
                 </p>
                 <p>
-                  My recent work experience is with Typescript, but I've worked with Python, Java, Elixir, and Ruby in various capacities as well.
-                </p>
-                <p>
-                  In my spare time, you can find me roaming the hills in search of good adventure.
+                  In my spare time, you can find me roaming the hills in search
+                  of good adventure.
                 </p>
                 <div class="contact-buttons">
-                  <div class="input-addon sm-shrink">
-                    <span class="item email-icon"></span>
-                    <a class="item button" href="mailto:cnorwood92@gmail.com?Subject=Hello">
-                      cnorwood92@gmail.com
-                    </a>
-                  </div>
-                  <div class="input-addon">
-                    <span class="item gh-icon"></span>
-                    <a class="item button" href="https://github.com/chrisnorwood/" target="_blank">
-                      Github
-                    </a>
-                  </div>
-                  <div class="input-addon">
-                    <span class="item li-icon"></span>
-                    <a class="item button" href="https://www.linkedin.com/in/chris-norwood/" target="_blank">
-                      LinkedIn
-                    </a>
-                  </div>
+                  <a
+                    class="contact-link"
+                    href="mailto:cnorwood92@gmail.com?Subject=Hello"
+                  >
+                    <span class="link-icon email-icon"></span>
+                    cnorwood92@gmail.com
+                  </a>
+                  <a
+                    class="contact-link"
+                    href="https://github.com/chrisnorwood/"
+                    target="_blank"
+                  >
+                    <span class="link-icon gh-icon"></span>
+                    Github
+                  </a>
+                  <a
+                    class="contact-link"
+                    href="https://www.linkedin.com/in/chris-norwood/"
+                    target="_blank"
+                  >
+                    <span class="link-icon li-icon"></span>
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             </div>
@@ -88,11 +150,40 @@
     </section>
     <footer class="footer-main">
       <span id="year"></span> | chrisnorwood.io
-      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
     </footer>
     <script type="text/javascript" src="js/scripts.min.js"></script>
     <script type="text/javascript">
       var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script>
+      (function () {
+        var picker = document.querySelector(".theme-picker");
+        var saved = localStorage.getItem("theme") || "";
+        picker.querySelectorAll(".theme-btn").forEach(function (btn) {
+          if (btn.getAttribute("data-theme") === saved) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+          btn.addEventListener("click", function () {
+            var theme = btn.getAttribute("data-theme");
+            if (theme) {
+              document.body.setAttribute("data-theme", theme);
+              localStorage.setItem("theme", theme);
+            } else {
+              document.body.removeAttribute("data-theme");
+              localStorage.removeItem("theme");
+            }
+            picker.querySelectorAll(".theme-btn").forEach(function (b) {
+              b.classList.remove("active");
+            });
+            btn.classList.add("active");
+          });
+        });
+      })();
     </script>
   </body>
 </html>
