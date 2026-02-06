@@ -87,7 +87,8 @@
       </header>
     </section>
     <footer class="footer-main">
-      2024 | chrisnorwood.io
+      <span id="year"></span> | chrisnorwood.io
+      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>
     <script type="text/javascript" src="js/scripts.min.js"></script>
     <script type="text/javascript">
